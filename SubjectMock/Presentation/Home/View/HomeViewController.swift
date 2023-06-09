@@ -30,7 +30,6 @@ final class HomeViewController: UIViewController {
     private let contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
         return view
     }()
     
@@ -40,6 +39,7 @@ final class HomeViewController: UIViewController {
         textField.layer.borderWidth = 0.5
         textField.layer.borderColor = UIColor(ciColor: .black).cgColor
         textField.placeholder = "추가할 데이터(Int)를 넣어주십시오"
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -80,6 +80,7 @@ final class HomeViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .label
         label.textAlignment = .center
+        label.numberOfLines = 0
         return label
     }()
     
@@ -221,6 +222,7 @@ extension HomeViewController {
         NSLayoutConstraint.activate([
             contentView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             contentView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            contentView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             
             inputDataTextField.topAnchor.constraint(equalTo: contentView.topAnchor),
             inputDataTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -239,6 +241,8 @@ extension HomeViewController {
             passthroughSubjectButtonStackView.centerXAnchor.constraint(equalTo: inputDataTextField.centerXAnchor),
             
             resultLabel.topAnchor.constraint(equalTo: passthroughSubjectButtonStackView.bottomAnchor, constant: 32.0),
+            resultLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            resultLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             resultLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             resultLabel.centerXAnchor.constraint(equalTo: inputDataTextField.centerXAnchor),
         ])
