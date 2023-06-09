@@ -18,15 +18,26 @@ final class HomeViewModel {
         self.passthroughSubject = PassthroughSubject()
     }
     
-    func appendCurrentSubject() {
-        self.currentSubject.value.append(1)
+    func stringToInt(with text: String) -> Int? {
+        guard let converted = Int(text) else {
+            return nil
+        }
+        return converted
     }
     
-    func sendCurrentSubject() {
-        self.currentSubject.send([1])
+    func currentSubject(append content: Int) {
+        self.currentSubject.value.append(content)
     }
     
-    func sendPassthroughSubject() {
-        self.passthroughSubject.send([1])
+    func currentSubject(send contents: [Int]) {
+        self.currentSubject.send(contents)
+    }
+    
+    func currentSubject(injection contents: [Int]) {
+        self.currentSubject.value = contents
+    }
+    
+    func passthroughSubject(send contents: [Int]) {
+        self.passthroughSubject.send(contents)
     }
 }

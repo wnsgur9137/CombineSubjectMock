@@ -14,6 +14,7 @@
 		A89F10582A31C53600C9E0D4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F10572A31C53600C9E0D4 /* MainTabBarController.swift */; };
 		A89F105A2A31C5BE00C9E0D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F10592A31C5BE00C9E0D4 /* HomeViewController.swift */; };
 		A89F105E2A31C62D00C9E0D4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F105D2A31C62D00C9E0D4 /* HomeViewModel.swift */; };
+		A89F10632A32CD8400C9E0D4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F10622A32CD8400C9E0D4 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A89F10572A31C53600C9E0D4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A89F10592A31C5BE00C9E0D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A89F105D2A31C62D00C9E0D4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A89F10622A32CD8400C9E0D4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				A89F10542A31C37D00C9E0D4 /* Application */,
 				A89F10562A31C3B200C9E0D4 /* Presentation */,
+				A89F10642A32CD8900C9E0D4 /* Domain */,
 				A89F10552A31C3AB00C9E0D4 /* Resources */,
 			);
 			path = SubjectMock;
@@ -116,6 +119,14 @@
 				A89F105D2A31C62D00C9E0D4 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A89F10642A32CD8900C9E0D4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A89F10622A32CD8400C9E0D4 /* Message.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				A89F10582A31C53600C9E0D4 /* MainTabBarController.swift in Sources */,
 				A89F105E2A31C62D00C9E0D4 /* HomeViewModel.swift in Sources */,
 				A89F105A2A31C5BE00C9E0D4 /* HomeViewController.swift in Sources */,
+				A89F10632A32CD8400C9E0D4 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
